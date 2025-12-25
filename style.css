@@ -27,6 +27,7 @@ body{
 
 .left-content{
   max-width:420px;
+  text-align: center;
 }
 
 .icon{
@@ -38,8 +39,9 @@ body{
   align-items:center;
   justify-content:center;
   font-size:24px;
-  margin-bottom:20px;
+  margin:0 auto 20px;   /* ⭐ center horizontally */
 }
+
 
 .left h1{
   font-size:28px;
