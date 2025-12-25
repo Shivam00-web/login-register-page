@@ -40,6 +40,15 @@ body{
   justify-content:center;
   font-size:24px;
   margin:0 auto 20px;   /* ⭐ center horizontally */
+
+}
+
+/* Username validation error */
+.error{
+  color: red;        /* 🔴 red color */
+  font-size: 12px;
+  display: none;     /* ❗ by default hidden */
+  margin-top: 4px;
 }
 
 
@@ -172,3 +181,44 @@ button:hover{
 .role-item input{
   margin:0;        /* default browser margin remove */
 }
+
+/*
+forgate password link style
+
+*/
+
+.forgot-text{
+  text-align:center;
+  margin-top:10px;
+  font-size:13px;
+}
+
+.forgot-text span{
+  color:#2563eb;
+  cursor:pointer;
+  font-weight:600;
+}
+/* Google Login Button */
+.social-login{
+  margin-top:15px;
+}
+
+.google-btn{
+  width:100%;
+  padding:12px;
+  border-radius:6px;
+  border:1px solid #db4437;
+  background:#fff;
+  color:#db4437;
+  font-size:14px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+.google-btn:hover{
+  background:#fbe9e7;
+}
+

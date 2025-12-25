@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SECTION -->
+  <div class="left">
+    <div class="left-content">
+      <div class="icon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <h1>Welcome to Skill Orbit</h1>
+      <p>Learn Robotics, AI and future technologies with expert mentors.</p>
+
+      <div class="card">🎓 Learn from experts</div>
+      <div class="card">🧠 Real-world projects</div>
+      <div class="card">📜 Certificates</div>
+      <div class="card">🌍 Global community</div>
+    </div>
+  </div>
+
+  <!-- RIGHT SECTION -->
+  <div class="right">
+
+    <!-- LOGIN -->
+    <div id="loginBox">
+      <h2>Login</h2>
+      <p class="sub">Welcome back! Please login</p>
+
+      <label>Username</label>
+      <input type="text" id="loginUsername" placeholder="Enter your username">
+
+      <label>Email</label>
+      <input type="email" id="loginEmail" placeholder="Enter your email">
+
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter your password">
+
+      <button type="button">Sign In →</button>
+
+      <!-- GOOGLE LOGIN -->
+      <div class="social-login">
+        <button type="button" class="google-btn" onclick="loginWithGoogle()">
+          <i class="fa-brands fa-google"></i> Continue with Google
+        </button>
+      </div>
+
+      <p class="forgot-text">
+        <span onclick="showForgot()">Forgot Password?</span>
+      </p>
+
+      <p class="switch-text">
+        Don’t have an account?
+        <span onclick="showRegister()">Register</span>
+      </p>
+    </div>
+
+    <!-- FORGOT PASSWORD -->
+    <div id="forgotBox" class="hide">
+      <h2>Reset Password</h2>
+      <p class="sub">Reset using Email or Phone</p>
+
+      <label>Email</label>
+      <input type="email" id="resetEmail" placeholder="Enter registered email">
+
+      <p class="or">OR</p>
+
+      <label>Phone</label>
+      <input type="tel" id="resetPhone" placeholder="Enter registered phone">
+
+      <button type="button" onclick="resetPassword()">Send OTP</button>
+
+      <p class="switch-text">
+        <span onclick="backToLogin()">Back to Login</span>
+      </p>
+    </div>
+
+    <!-- OTP VERIFY -->
+    <div id="otpBox" class="hide">
+      <h2>Verify OTP</h2>
+      <p class="sub">Enter OTP sent to email or phone</p>
+
+      <input type="text" id="otpInput" placeholder="Enter OTP">
+      <button type="button" onclick="verifyOTP()">Verify OTP</button>
+
+      <p class="switch-text">
+        <span onclick="backToLogin()">Cancel</span>
+      </p>
+    </div>
+
+    <!-- NEW PASSWORD -->
+    <div id="newPassBox" class="hide">
+      <h2>Create New Password</h2>
+      <p class="sub">Set your new password</p>
+
+      <label>New Password</label>
+      <input type="password" id="newPassword" placeholder="New password">
+
+      <label>Confirm Password</label>
+      <input type="password" id="confirmNewPassword" placeholder="Confirm password">
+
+      <button type="button" onclick="saveNewPassword()">Save Password</button>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="registerBox" class="hide">
+      <h2>Create Account</h2>
+      <p class="sub">It’s quick and easy</p>
+
+      <form id="signupForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Full name">
+
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Username">
+        <small id="usernameError" class="error">
+          Username must be 4+ characters (letters, numbers, _)
+        </small>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Email">
+
+        <label>Phone (optional)</label>
+        <input type="tel" id="phone" placeholder="Phone">
+
+        <label>I am a:</label>
+        <div class="role-group">
+          <label class="role-item">
+            <input type="radio" name="role" value="Student"> Student
+          </label>
+          <label class="role-item">
+            <input type="radio" name="role" value="Teacher"> Teacher
+          </label>
+          <label class="role-item">
+            <input type="radio" name="role" value="Admin"> Admin
+          </label>
+        </div>
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Password">
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password">
+
+        <button type="submit">Register →</button>
+      </form>
+
+      <p class="switch-text">
+        Already have an account?
+        <span onclick="showLogin()">Login</span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- JS -->
+<script src="login.js"></script>
+</body>
+</html>
