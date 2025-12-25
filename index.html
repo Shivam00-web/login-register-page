@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="left-content">
+      <div class="icon"><i class="fa-solid fa-user"></i></div>
+      <h1>Welcome to Skill Orbit</h1>
+      <p>Learn Robotics, AI and future technologies with expert mentors.</p>
+
+      <div class="card">🎓 Learn from experts</div>
+      <div class="card">🧠 Real-world projects</div>
+      <div class="card">📜 Certificates</div>
+      <div class="card">🌍 Global community</div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <!-- LOGIN -->
+    <div id="loginBox">
+      <h2>Login</h2>
+      <p class="sub">Welcome back! Please login</p>
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email">
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password">
+
+      <button>Sign In →</button>
+
+      <p class="switch-text">
+        Don’t have an account?
+        <span onclick="showRegister()">Register</span>
+      </p>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="registerBox" class="hide">
+      <h2>Create Account</h2>
+      <p class="sub">It’s quick and easy</p>
+
+      <form id="signupForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label>Phone (optional)</label>
+        <input type="tel" id="phone" placeholder="Enter phone number">
+
+        <label>I am a:</label>
+  <div class="role-group">
+  <label class="role-item">
+    <input type="radio" name="role" value="Student"> Student
+  </label>
+
+  <label class="role-item">
+    <input type="radio" name="role" value="Teacher"> Teacher
+  </label>
+
+  <label class="role-item">
+    <input type="radio" name="role" value="Admin"> Admin
+  </label>
+</div>
+
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Create password">
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password">
+
+        <button type="submit">Register →</button>
+
+      </form>
+
+      <p class="switch-text">
+        Already have an account?
+        <span onclick="showLogin()">Login</span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
